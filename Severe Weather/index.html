@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!-- This should be the landing page. 
+	Explanation of project and links to each visualization page -->
+
+<html lang =  "en-us">
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap Visualization Dashboard</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+
+<body>
+<!-- include in this docu
+nav bar with links to 
+	plots(with drop down)
+	comparison page
+	Data
+box with summary and a chart,
+box to right with other visualizations
+-->
+
+<!--nav bar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			     </button>
+				<a class="navbar-brand" href="index.html">Latitude</a>
+			</div>
+			<!--drop down on nav bar -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item dropdown">
+						 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+
+						<ul class="dropdown-menu">
+							<div class="dropdown-menu">
+							<li><a href="Wind.html">Wind</a></li>
+							<li><a href="Cloudiness.html">Cloudiness</a></li>
+							<li><a href="Temperature.html">Temperature</a></li>
+							<li><a href="Humidity.html">Humidity</a></li>
+						</ul>
+					</li>
+
+			<!-- other 2 links on the horizontal ul on nav bar -->
+			<li><a href="Comparison.html">Comparison</a></li>
+			<li><a href="Data.html">Data</a></li>
+		</ul>
+
+		</div>
+
+	</nav>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm12 col-md-8">
+			<div class="Titles">
+				<h2><strong>Summary: Latitude vs. X</strong></h2>
+			</div>
+			<hr>
+			<div class="col-sm-12">
+				<p>The oerall purpose of this project was to visualize temperature changes as you approach the equator. To complete this task, we utilized the OpenWeatherMap API to create a dataset on selected cities. We then used latitude and longitude to randomly generate a list of locations.  </p>
+				<br>
+
+				<p>Once the dataset was created, we then plotted weather vs. latitude. Additional factors we accounted for included cloudiness, wind speed, temperature, and humidity. </p>
+			</div>
+			
+		</div>
+		<!-- right side -->
+		<div class="col-sm-12 col-md-4">
+			<div class="Titles">
+				<h3><strong>Visualizations</strong></h3>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<a href ="Cloudiness.html">
+						<div class="thumbnail">
+							<img src="cloudiness.png" alt ="Lat v Cloudiness">
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6">
+					<a href ="Wind.html">
+						<div class="thumbnail">
+							<img src="wind.png" alt ="Lat v Wind Speed">
+						</div>
+					</a>
+				</div>
+			</div>
+							<!--second row of thumbnails -->
+
+			<div class="row">
+				<div class="col-sm-6">
+					<a href ="Temperature.html">
+						<div class="thumbnail">
+							<img src="temperature.png" alt ="Lat v Temperature">
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6">
+					<a href ="Humidity.html">
+						<div class="thumbnail">
+							<img src="humidity.png" alt ="Lat v Humidity">
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<!--right side box with visualizations links and thumbnails-->
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+  <!--CAROUSEL-->
+  <div class="container-full">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="Images/ufosighting_img1.jpg" alt="UFO Sighting" class="img-responsive">
+          <div class="carousel-caption">
+            <h1>UFO Sightings</h1>
+          </div>
+        </div>
+        <div class="item">
+          <img src="Images/ufosighting_img2.jpg" alt="UFO Sighting" class="img-responsive">
+          <div class="carousel-caption">
+            <h1>UFO Sightings</h1>
+          </div>
+        </div>
+        <div class="item">
+          <img src="Images/ufosighting_img3.jpg" alt="UFO Sighting" class="img-responsive">
+          <div class="carousel-caption">
+            <h1>UFO Sightings</h1>
+          </div>
+        </div>
+        <div class="item">
+          <img src="Images/ufosighting_img4.jpg" alt="UFO Sighting" class="img-responsive">
+          <div class="carousel-caption">
+            <h1>UFO Sightings</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!--.CAROUSEL-->
+
+  <!--MAIN BODY-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 collapse" id="filterbox">
+        <div class="card-block">
+          <div class="card-title">Filter</div>
+          <div class="card-text">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="datetimeInput">Datetime</label>
+                  <input type="text" class="form-control" id="datetimeInput" placeholder="Datetime">    
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="shapeInput">Shape of UFO Sighting</label>
+                  <input type="text" class="form-control" id="shapeInput" placeholder="Shape">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="cityInput">City</label>
+                  <input type="text" class="form-control" id="cityInput" placeholder="City">
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="stateInput">State</label>
+                  <input type="text" class="form-control" id="stateInput" placeholder="State">
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="countryInput">Country</label>
+                  <input type="text" class="form-control" id="countryInput" placeholder="Country">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <button type="submit" id="reset" class="btn btn-primary">Reset</button>
+                  <button type="submit" id="search" class="btn btn-primary">Apply</button> 
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+        <!--Filter Button-->
+        <div class="row">
+          <div class="col-md-3">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#filterbox" id="FilterBtn">Add Filter</button>
+          </div>
+        </div>
+        <!--/Filter Button-->
+
+        <!--TABLE-->
+        <div class="container-full" id="UFO-table">
+          <table class="table table-striped table-hover table-responsive">
+            <thead class="thead-inverse bg-dark text-white">
+              <tr>
+                <th>Datetime</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Shape</th>
+                <th>Duration(in Min)</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+  <!--/.TABLE-->
+  <!--Pagination-->
+  <div class="pagination">
+    <div class="row">
+      <p id="pageresult">
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+          <strong>
+            <input type="button" id="first" class="btn btn-sm" onclick="firstPage()" value="<<"/>
+            <input type="button" id="previous" class="btn btn-sm" onclick="previousPage()" value="< Previous"/>
+            <input type="button" id="next" class="btn btn-sm" onclick="nextPage()" value="Next >"/>
+            <input type="button" id="last" class="btn btn-sm" onclick="lastPage()" value=">>"/>
+          </strong>
+      </div>
+    </div>
+  </div>
+  
+  <!--/.Pagination-->
+  <!--Footer-->
+  <footer class="page-footer center-on-small-only stylish-color-dark">
+    <!--Copyright-->
+    <div class="footer-copyright">
+      <div class="container-fluid">
+        <p style="text-align: center;">
+          © 2018 Copyright: Aiyana Liz Mathew
+        </p>
+      </div>
+    </div>
+    <!--/.Copyright-->
+  </footer>
+  <!--/.Footer-->
+
+  <script src="Data/data.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+  
+
+</body>
+
+</html>

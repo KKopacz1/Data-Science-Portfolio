@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+
+<html lang =  "en-us">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Visualization Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+
+<body>
+
+
+<!--nav bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+           </button>
+        <a class="navbar-brand" href="index.html">Latitude</a>
+      </div>
+      <!--drop down on nav bar -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+              <div class="dropdown-menu">
+              <li><a href="Wind.html">Wind</a></li>
+              <li><a href="Cloudiness.html">Cloudiness</a></li>
+              <li><a href="Temperature.html">Temperature</a></li>
+              <li><a href="Humidity.html">Humidity</a></li>
+            </ul>
+          </li>
+
+      <!-- other 2 links on the horizontal ul on nav bar -->
+      <li><a href="Comparison.html">Comparison</a></li>
+      <li><a href="Data.html">Data</a></li>
+    </ul>
+
+    </div>
+
+  </nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm12 col-md-8">
+      <div class="Titles">
+        <h2><strong>Latitude vs. Humidity</strong></h2>
+      </div>
+      <hr>
+      <img src="Humidity.png">
+      <div class="col-sm-12">
+        <p>Atmospheric Humidity was measured in random coordinates across the planet. The above graph shows humidity's relationship to latitude. </p>
+        <br>
+
+        <p>Cities were observed to be more humid near the equator, however, there is a more distinct trend favoring the northern hemisphere </p>
+      </div>
+      
+    </div>
+    <!-- right side -->
+    
+  </div>
+</div>
+
+
+
+</body>
+
+
+</html>
